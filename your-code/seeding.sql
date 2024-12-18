@@ -1,32 +1,27 @@
-insert into cars(car_id, manufacturer, model, year_, color)
-values ('0', 'Volkswagen','Tiguan', '2019','Blue'),
-('1', 'Peugeot','Rifter', '2019', 'Red'),
-('2', 'Ford','Fusion', '2018', 'White'),
-('3', 'Toyota','RAV4', '2018', 'Silver'),
-('4', 'Volvo', 'V60', '2019', 'Gray'),
-('5', 'Volvo','V60 Cross Country', '2019', 'Gray');
+INSERT INTO cars (VIN, manufacturer, model, year, color) VALUES
+('1HGCM82633A123456', 'Honda', 'Accord', 2020, 'Blue'),
+('1FTFW1EF1EFA12345', 'Ford', 'F-150', 2021, 'Red'),
+('2T1BURHE8JC123456', 'Toyota', 'Corolla', 2019, 'White'),
+('3FA6P0H76JR123456', 'Ford', 'Fusion', 2018, 'Silver'),
+('1C4RJFAG8FC123456', 'Jeep', 'Cherokee', 2022, 'Black');
 
+INSERT INTO customers (name, phone_number, email, address, city, state_province, country, zip_code) VALUES
+('John Doe', '+1 (555) 123-4567', 'johndoe@example.com', '123 Elm St', 'Los Angeles', 'CA', 'USA', '90001'),
+('Jane Smith', '+1 (555) 234-5678', 'janesmith@example.com', '456 Oak St', 'San Francisco', 'CA', 'USA', '94105'),
+('Michael Johnson', '+1 (555) 345-6789', 'michaelj@example.com', '789 Pine St', 'Chicago', 'IL', 'USA', '60601'),
+('Emily Davis', '+1 (555) 456-7890', 'emilyd@example.com', '101 Maple St', 'New York', 'NY', 'USA', '10001'),
+('Daniel Brown', '+1 (555) 567-8901', 'danielb@example.com', '202 Birch St', 'Miami', 'FL', 'USA', '33101');
 
-insert into costumer(costumer_id, first_name, phone_no, email, address, city, state, country, zip_code)
-values ('10001', 'Pablo Picasso', '+34 636 17 63 82', '-', 'Paseo de la Chope', 'Madrid', 'Madrid', 'Spain', '28045'),
-('20001', 'Abraham Lincoln', '+1 305 907 7086', '-', '120 SW 8th St', 'Miami', 'Florida', 'United States', '33130'),
-('30001', 'Napoleon Bonaparte', '+33 1 79 75 40 00', '-', '40 Rue du Colisée', 'Paris', 'Île-de-France', 'France', '75008');
+INSERT INTO salespersons (name, store_name) VALUES
+('Alice Cooper', 'AutoZone Los Angeles'),
+('Bob Martin', 'Ford Dealership SF'),
+('Charlie Watson', 'Toyota City Chicago'),
+('David Lee', 'Fusion Auto New York'),
+('Eve Johnson', 'Jeep Garage Miami');
 
-
-insert into salesperson (salesperson_id, first_name, store_name)
-values ('00001', 'Petey Cruiser', '0'),
-('00002', 'Anna Sthesia', '1'),
-('00003', 'Paul Molive', '2'),
-('00004', 'Gail Forcewind', '3'),
-('00005', 'Paige Turner', '4'),
-('00006', 'Bob Frapples', '5'),
-('00007', 'Walter Melon', '6'),
-('00008', 'Shonda Leer', 'São Paulo');
-
-insert into invoices (invoice_id, date_, car, costumer, salesperson)
-values ('852399038', '2018-08-22',	'0','1','3'),
-('731166526', '2018-12-31', '3', '0', '5'),
-('271135104', '2019-01-22', '2','2','7');
-
-
-
+INSERT INTO invoices (car_VIN, customer_id, salesperson_id) VALUES
+('1HGCM82633A123456', 1, 1),  -- John Doe purchased a Honda Accord from Alice Cooper
+('1FTFW1EF1EFA12345', 2, 2),  -- Jane Smith purchased a Ford F-150 from Bob Martin
+('2T1BURHE8JC123456', 3, 3),  -- Michael Johnson purchased a Toyota Corolla from Charlie Watson
+('3FA6P0H76JR123456', 4, 4),  -- Emily Davis purchased a Ford Fusion from David Lee
+('1C4RJFAG8FC123456', 5, 5);  -- Daniel Brown purchased a Jeep Cherokee from Eve Johnson
